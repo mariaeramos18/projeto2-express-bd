@@ -56,7 +56,7 @@ app.put('/alunos/:id', (req, res) => {
   let index= buscarIndexAluno(req.params.id)
   alunos[index].nome = req.body.nome
   alunos[index].curso = req.body.curso
-  res.send('Aluno com id ${req.params.id} atualizado com sucesso!')
+  res.send(alunos)
 })
 
 export default app
